@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Gallery</h1>
+    <p class="sub">Filter by category — tabs use Flexbox, the photo layout uses Grid</p>
+  </header>
+
+  <!-- FLEXBOX: tab row, single line of buttons -->
+  <div class="tabs">
+    <button class="tab active" data-filter="all">All</button>
+    <button class="tab" data-filter="nature">Nature</button>
+    <button class="tab" data-filter="architecture">Architecture</button>
+    <button class="tab" data-filter="travel">Travel</button>
+    <button class="tab" data-filter="food">Food</button>
+  </div>
+
+  <!-- GRID: photo layout, responsive columns -->
+  <section class="gallery" id="gallery">
+
+    <figure class="photo" data-category="nature">
+      <img src="https://picsum.photos/id/1015/500/500" alt="Mountain river">
+      <figcaption>Mountain River</figcaption>
+    </figure>
+
+    <figure class="photo" data-category="architecture">
+      <img src="https://picsum.photos/id/1021/500/500" alt="City building">
+      <figcaption>Glass Tower</figcaption>
+    </figure>
+
+    <figure class="photo" data-category="food">
+      <img src="https://picsum.photos/id/292/500/500" alt="Plated meal">
+      <figcaption>Plated Dish</figcaption>
+    </figure>
+
+    <figure class="photo" data-category="travel">
+      <img src="https://picsum.photos/id/1041/500/500" alt="Old street">
+      <figcaption>Cobblestone Street</figcaption>
+    </figure>
+
+    <figure class="photo" data-category="nature">
+      <img src="https://picsum.photos/id/1043/500/500" alt="Forest path">
+      <figcaption>Forest Path</figcaption>
+    </figure>
+
+    <figure class="photo" data-category="architecture">
+      <img src="https://picsum.photos/id/164/500/500" alt="Bridge structure">
+      <figcaption>Steel Bridge</figcaption>
+    </figure>
+
+    <figure class="photo" data-category="travel">
+      <img src="https://picsum.photos/id/1036/500/500" alt="Mountain village">
+      <figcaption>Hillside Village</figcaption>
+    </figure>
+
+    <figure class="photo" data-category="food">
+      <img src="https://picsum.photos/id/431/500/500" alt="Coffee cup">
+      <figcaption>Morning Coffee</figcaption>
+    </figure>
+
+  </section>
+
+  <script src="first.js"></script>
+</body>
+</html>

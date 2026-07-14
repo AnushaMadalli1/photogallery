@@ -1,0 +1,96 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  background-color: #FBF3E7;
+  color: #3E2A1E;
+  padding: 40px 24px 60px;
+}
+
+header{
+  max-width: 900px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+header h1{
+  margin-bottom: 6px;
+}
+
+.sub{
+  color: #5C4433;
+  font-size: 0.9rem;
+}
+
+/* ============ FLEXBOX: tab row ============ */
+.tabs{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.tab{
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #FFFFFF;
+  border: 2px solid #1A1A1A;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tab:hover{
+  background-color: #F3DFC1;
+}
+
+.tab.active{
+  background-color: #4FB8A6;
+  color: #1A1A1A;
+}
+
+/* ============ GRID: photo layout ============ */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.photo{
+  border: 3px solid #1A1A1A;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  transition: transform 0.25s ease;
+}
+
+.photo:hover{
+  transform: translateY(-4px);
+}
+
+.photo img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo figcaption{
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* hidden photos (filtered out) are removed from layout entirely */
+.photo.hidden{
+  display: none;
+}
